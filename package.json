@@ -1,0 +1,33 @@
+{
+  "name": "blacklotus",
+  "version": "1.0.0",
+  "description": "This is a text encryption app based on sherlock homles black lotus encryption system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T-NAVe/BlackLotus.git"
+  },
+  "keywords": [
+    "black",
+    "lotus"
+  ],
+  "author": "Luca de Acha - Gonzalo Aguilar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/T-NAVe/BlackLotus/issues"
+  },
+  "homepage": "https://github.com/T-NAVe/BlackLotus#readme",
+  "dependencies": {
+    "epub-parser": "^0.2.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "express-session": "^1.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
