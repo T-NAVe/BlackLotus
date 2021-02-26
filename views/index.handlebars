@@ -1,1 +1,21 @@
-Index html
+<h4>Welcome to BlackLotus text encryptor.</h4>
+<p>The encryption method is based on the one used by Black Lotus Tong, a criminal organisation based in China on the popular tv series Sherlock.</p>
+
+<h5>The process is simple:</h5>
+<ul>
+    <li>Choose a book</li>
+    <li>write some text/paste encrypted text</li>
+    <li>Press Encrypt / Decrypt</li>
+</ul>
+<p>You can also submit your own book(only epub format).</p>
+<p>Be aware that the same exact copy of the book has to be used in order to work correctly, otherwise the decryption method won't give the expected results</p>
+
+<form action="encrypt" method="POST">
+    <select name="book" id="">
+        <option value="./Riches and Poverty.epub">Riches and Poverty</option>
+        <option value="./The Institute.epub">The Institute</option>
+    </select>
+    <textarea name="text" id="" cols="30" rows="10"></textarea>
+    <button type="submit">Encrypt</button>
+    <button class="submit" formaction="/decrypt">decrypt</button>
+</form>

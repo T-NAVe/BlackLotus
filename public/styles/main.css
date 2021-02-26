@@ -1,0 +1,135 @@
+body{
+    background-color: #e5e2e2;
+  }
+  header{
+    width: 100%;
+    display: block;
+  }
+  nav h2{
+    float: left;
+    margin-left: 2%;
+  }
+  nav h2 a{
+    text-decoration: none;
+    color: black;
+  }
+  .login{
+    float: right;
+    padding: 30px;
+  }
+  .login a {
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background-color:#ffffff;
+  border-radius:6px;
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  cursor:pointer;
+  color:#666666;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+  }
+  .login a:hover {
+  background-color:#f6f6f6;
+  }
+  .login a:active{
+  position:relative;
+  top:1px;
+  }
+  .box{
+    margin: 0 auto;
+    width: 80%;
+    box-shadow: inset 1px 0px 10px -7px rgba(0,0,0,0.75);
+    margin-top: 50px;
+  }
+  .libros{
+    width: 90%;
+    margin: 0 auto !important;
+    display: block;
+  }
+  .libro{
+    float: left;
+    display: block; 
+    padding: 35px;
+  }
+  .libro h3{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .libro img{
+    width: 200px;
+    height: 300px;
+  }
+  .libro img:hover{
+    box-shadow: 1px 0px 25px -7px rgba(0,0,0,0.75);
+  }
+  #form_edit{
+    padding: 15px;
+  }
+  .submit{
+    width: 10% !important;
+  }
+  #form_edit label {
+    width: 100%;
+    display: block;
+    margin-top: 5px;
+  }
+  #form_edit input{
+    width: 40%;
+    display: block;
+    margin-top: 5px;
+  }
+  #form_edit textarea{
+    width: 40%;
+    min-height: 75px;
+    display: block;
+    margin-top: 5px;
+  }
+  .bestiario{
+    padding: 20px;
+    display: block;
+  }
+  .bestiario a{
+    text-decoration: none;
+    color: black;
+  }
+  .bestiario a:hover{
+    text-decoration: none;
+    color: rgb(49, 47, 47);
+  }
+  .bestiario a:active{
+    text-decoration: none;
+    color: rgb(112, 111, 111);
+  }
+  .message-failure{
+    color: red;
+  }
+  .beasts{
+    float: left;
+    display: block; 
+    padding: 35px;
+  }
+  .beasts h3{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  .img{
+    width: 150px;
+    height: 200px;
+    border-radius: 40px;
+  }
+  .img:hover{
+    box-shadow: 1px 0px 25px -7px rgba(0,0,0,0.75);
+  }
+  .img img{
+    width: 150px;
+    height: 200px;
+    border-radius: 40px;
+  }
+  .imgbig{
+    box-shadow: 1px 0px 25px -7px rgba(0,0,0,0.75);
+    border-radius: 40px;
+  }
+  
