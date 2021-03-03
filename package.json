@@ -22,12 +22,10 @@
   },
   "homepage": "https://github.com/T-NAVe/BlackLotus#readme",
   "dependencies": {
-    "connect-multiparty": "^2.2.0",
     "epub": "^1.2.1",
     "epub-parser": "^0.2.5",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.1",
-    "express-session": "^1.17.1",
     "install": "^0.13.0",
     "npm": "^7.5.4"
   },

@@ -1,7 +1,5 @@
 'use strict'
-const { rejects } = require('assert');
 const EPub = require ('epub');
-var fs = require('fs');
 
 
 const eParse = {
@@ -100,7 +98,6 @@ const eParse = {
             for (let index = 0; index < chapters; index++) {
                 ids.push(epub.spine.contents[index].id)                
             }
-            //format boot in an array of chapters. Note, this is when i learned that you can't handle callbacks inside a for loop just like that.
 
             function getChapterPromisified(args){return new Promise((resolve, reject)=>{
                 epub.getChapter(args, (err,data)=>{
@@ -114,7 +111,7 @@ const eParse = {
                 });
                 }); 
             }
-            //sacar el chapter, buscar en ese chapter 
+
             var promises = ids.map(id => getChapterPromisified(id));
             Promise.all(promises)
             .then(array => {
@@ -144,26 +141,6 @@ const eParse = {
             })
             .catch(error => console.error("An error occurred:", error));
         });
-
-
     }
 }
 module.exports = eParse;
-
-/*var recursiveChapter = function (n) {
-    if (n < chapters) {
-        // chapter function
-        epub.getChapter(epub.spine.contents[n].id, function(err, data){
-            if(err){
-                throw err
-            }
-            //remove HTML tags
-            let str = data.replace(/<\/?[\w\s]*>|<.+[\W]>/g, '');
-            book.push(str)
-            recursiveChapter(n+1)
-        });    
-     }
-}
-//start the recursive function
-recursiveChapter(0)
-console.log(book)*/
