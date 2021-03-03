@@ -38,7 +38,7 @@ app.get("/", (req, res)=>{
     else{
       res.render("index", {layout: "main"});
     
-    var epub = new EPub("./Riches and Poverty.epub", "/imagewebroot/", "/articlewebroot/");
+    var epub = new EPub("./fundacionbsas.epub", "/imagewebroot/", "/articlewebroot/");
     epub.on("error", function(err){
         console.log("ERROR\n-----");
         throw err;
@@ -49,6 +49,7 @@ app.get("/", (req, res)=>{
         console.log(epub.manifest);*/
     
         /*console.log("\nMANIFEST:\n");
+        console.log(epub.manifest)
         fs.writeFile("test.json", JSON.stringify(epub.manifest) , function(err) {
           if (err) {
               console.log(err);
@@ -70,7 +71,7 @@ app.get("/", (req, res)=>{
         4- return the search results: "ChapterNum(not actual chapter but the Array index) + wordIndex"
         in the case shown below, the result of the search where would be: 5-2389 (array[5]-string[2389])
         */
-        epub.getChapter("item8", function(err, data){
+        /*epub.getChapter("item8", function(err, data){
             if(err){
                 console.log(err);
                 return;
@@ -79,7 +80,7 @@ app.get("/", (req, res)=>{
             //console.log("\nCHAPTER CONTENT:\n");
             //console.log(str);
             //console.log(str.search("where"));
-        });
+        });*/
     
         /*
         epub.getImage(image_id, function(err, data, mimeType){
@@ -102,7 +103,9 @@ app.post('/encrypt', (req, res)=>{
 
 })
 app.post('/decrypt', (req, res)=>{
-  res.render("decrypt")
+  eParse.decryptEpub(req.body.book, req.body.text, result=>{
+    res.render("encrypt",{ layout: "main", result: result });
+  });
 
 })
 
