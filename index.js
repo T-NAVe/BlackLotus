@@ -40,6 +40,6 @@ app.post('/decrypt', (req, res)=>{
 })
 
 
-app.listen(HTTP_PORT, () => {
+app.listen(process.env.PORT || HTTP_PORT, () => {
     console.log(`Servidor iniciado en http://localhost:${HTTP_PORT}/ ...`)
   });
