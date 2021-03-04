@@ -35,7 +35,7 @@ app.post('/encrypt', (req, res)=>{
 })
 app.post('/decrypt', (req, res)=>{
   eParse.decryptEpub(req.body.book, req.body.text, result=>{
-    res.render("encrypt",{ layout: "main", result: result });
+    res.render("decrypt",{ layout: "main", result: result });
   });
 })
 

@@ -1,22 +1,50 @@
-<h4>Welcome to BlackLotus text encryptor.</h4>
-<p>The encryption method is based on the one used by Black Lotus Tong, a criminal organisation based in China on the popular tv series Sherlock.</p>
+<div class="hero-body">
+    <div class="block">
+        <h4 class="title is-4">Welcome to BlackLotus text encryptor.</h4>
+        <p class="subtitle">The encryption method is based on the one used by Black Lotus Tong, a criminal organisation based in China on the popular tv series Sherlock.</p>
+    </div>   
+    <div class="block">
+        <h5 class="title is-5">The process is simple:</h5>
+    <ul>
+        <li>Choose a book</li>
+        <li>write some text/paste encrypted text</li>
+        <li>Press Encrypt / Decrypt</li>
+    </ul>
+    </div>
+    <div class="block">
+        <h5 class="subtitle">That's it! have fun encrypting your messages.</h5>
+    </div>
 
-<h5>The process is simple:</h5>
-<ul>
-    <li>Choose a book</li>
-    <li>write some text/paste encrypted text</li>
-    <li>Press Encrypt / Decrypt</li>
-</ul>
-<p>You can also submit your own book(only epub format).</p>
-<p>Be aware that the same exact copy of the book has to be used in order to work correctly, otherwise the decryption method won't give the expected results</p>
+    </br>
 
-<form action="encrypt" method="POST">
-    <select name="book" id="">
-        <option value="./fundacionbsas.epub"> Fundación de la Cuidad de Buenos Aires</option>
-        <option value="./Riches and Poverty.epub">Riches and Poverty</option>
-        <option value="./The Institute.epub">The Institute</option>
-    </select>
-    <textarea name="text" id="" cols="30" rows="10"></textarea>
-    <button type="submit">Encrypt</button>
-    <button class="submit" formaction="/decrypt">decrypt</button>
-</form>
+    <form action="encrypt" method="POST">
+        <div class="field">
+            <label class="label" for="book">Choose your book/language</label>
+            <div class="control">
+                <select name="book" id="">
+                <option value="./El_Gaucho_Martin_Fierro.epub">El Gaucho Martín Fierro, de José Hernández (spanish)</option>
+                <option value="./Don_Quijote.epub">Don Quijote, de Miguel de Cervantes Saavedra (spanish)</option>
+                <option value="./The_Hound_of_the_Baskervilles.epub">The Hound of the Baskervilles, by Arthur Conan Doyle</option>
+                <option value="./The_Adventures_of_Tom_Sawyer.epub">The Adventures of Tom Sawyer, by Mark Twain</option>
+            </select>
+            </div>
+        </div>
+        <div class="field">
+            <label class="label" for="text">Write your text</label>
+            <div class="control">
+                <textarea class="textarea" name="text" id="" cols="30" rows="10" placeholder="watch your spelling!!..."></textarea>
+            </div>
+
+        </div>
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button" type="submit">Encrypt</button>
+            </div>
+            <div class="control">
+                <button class="button" formaction="/decrypt">decrypt</button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
